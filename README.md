@@ -8,6 +8,7 @@
 3)3D rotating image gallery - https://youtu.be/j1-Ak3WWV_g<br>
 4)Main 3D rotating gallery to work on - https://youtu.be/j8WkJVZdcrU<br>
 5)Codeopen's 3D rotating points - https://codepen.io/depthdev/pen/QjxmxO<br>
+                                  https://codepen.io/johnblazek/pen/nceyw/<br>
 ========================================================================<br>
 <b>Team SAS's resources</b></br>
 https://the-goonies.webflow.io/<br>
