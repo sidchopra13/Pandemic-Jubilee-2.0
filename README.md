@@ -10,7 +10,7 @@
 5)Codeopen's 3D rotating points - https://codepen.io/depthdev/pen/QjxmxO<br>
 ========================================================================<br>
 <b>Team SAS's resources</b></br>
-https://saumya25mis.github.io/HappiestBirthdayMuskan/<br>
+https://the-goonies.webflow.io/<br>
 ========================================================================<br>
 <b>Team GR's resources</b><br>
-https://the-goonies.webflow.io/<br>
+https://saumya25mis.github.io/HappiestBirthdayMuskan/<br>
