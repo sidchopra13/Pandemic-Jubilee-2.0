@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(184, 149, 149);
     font-family: 'Poppins', sans-serif;
+    padding: 0.2rem;
 }
 
 
@@ -26,17 +26,17 @@
 
 .wrapper .card {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 400px;
+    width: 320px;
     padding: 5px;
-    background: #fff;
+    background: brown;
     border-radius: 10px;
     transform: translateY(0deg);
     backface-visibility: hidden;
     transform-style: preserve-3d;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    padding: 2 rem;
+    padding: 1 rem;
 }
 
 .wrapper:hover>.front-face {
@@ -56,6 +56,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     transform: rotateY(180deg);
+    background-color: white;
 }
 
 .wrapper:hover>.back-face {
@@ -113,5 +114,12 @@
 }
 
 .cont1 {
-    background-color: rgb(184, 149, 149);
+    background-color: rgb(255, 253, 220);
+}
+
+strong {
+    font-size: 3.5rem;
+    color: brown;
+    align-content: center;
+
 }
