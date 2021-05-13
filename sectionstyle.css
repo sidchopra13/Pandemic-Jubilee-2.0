@@ -36,6 +36,7 @@
     transform-style: preserve-3d;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    padding: 2 rem;
 }
 
 .wrapper:hover>.front-face {
@@ -59,6 +60,7 @@
 
 .wrapper:hover>.back-face {
     transform: rotateY(0deg);
+    position: absolute;
 }
 
 .wrapper .back-face img {
@@ -110,6 +112,6 @@
     background: linear-gradient(375deg, transparent, transparent);
 }
 
-.connt1 {
-    background-color: black;
+.cont1 {
+    background-color: rgb(184, 149, 149);
 }
