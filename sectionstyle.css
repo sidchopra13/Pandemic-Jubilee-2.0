@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+@keyframes identifier {}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +24,24 @@
     position: relative;
     transform-style: preserve-3d;
     perspective: 1000px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: perspective(1000px) translatey(0px) translateZ(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: perspective(1000px) translatey(-10px) translateZ(-50px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: perspective(1000px) translatey(0px) translateZ(0px);
+    }
 }
 
 .wrapper .card {
@@ -29,7 +49,7 @@
     height: 400px;
     width: 320px;
     padding: 5px;
-    background: brown;
+    background: white;
     border-radius: 10px;
     transform: translateY(0deg);
     backface-visibility: hidden;
@@ -114,23 +134,43 @@
 }
 
 .cont1 {
-    background-color: rgb(255, 253, 220);
+    background-image: url("bg1.jpg");
 }
 
-strong {
-    font-size: 3.5rem;
-    color: brown;
-    align-content: center;
 
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    height: 40px;
-    width: 40px;
-    outline: black;
-    background-color: brown;
+    height: 100px;
+    width: 100px;
     background-size: 100%, 100%;
-    border-radius: 25%;
+    border-radius: 50%;
     border: 1px solid black;
+}
+
+h1 {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin: 20px;
+    top: 73vh;
+    right: 60vh;
+    bottom: 15px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 5rem;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+body {
+    background-image: url("bg1.jpg");
 }
