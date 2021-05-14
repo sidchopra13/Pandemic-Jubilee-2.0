@@ -123,3 +123,14 @@ strong {
     align-content: center;
 
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 40px;
+    width: 40px;
+    outline: black;
+    background-color: brown;
+    background-size: 100%, 100%;
+    border-radius: 25%;
+    border: 1px solid black;
+}
