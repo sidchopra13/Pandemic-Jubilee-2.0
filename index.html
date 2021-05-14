@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel="icon" href="images/favicon-farewell.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pandemic Jubilee 2.0 (2021 Batch)</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="jquery.easing.1.3.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles2.css">
+	<link rel="stylesheet" href="css/style3.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@700&display=swap" rel="stylesheet">
+	<!-- Section-3 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+			crossorigin="anonymous">
+	<!-- Section-3 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$curtainopen = false;
+			$(".rope").click(function() {
+				$(this).blur();
+				if ($curtainopen == false) {
+					$(this).stop().animate({
+						top: '0px'
+					}, {
+						queue: false,
+						duration: 350,
+						easing: 'easeOutBounce'
+					});
+					$(".leftcurtain").stop().animate({
+						width: '60px'
+					}, 2000);
+					$(".rightcurtain").stop().animate({
+						width: '60px'
+					}, 2000);
+					$curtainopen = true;
+				} else {
+					$(this).stop().animate({
+						top: '-40px'
+					}, {
+						queue: false,
+						duration: 350,
+						easing: 'easeOutBounce'
+					});
+					$(".leftcurtain").stop().animate({
+						width: '50%'
+					}, 2000);
+					$(".rightcurtain").stop().animate({
+						width: '51%'
+					}, 2000);
+					$curtainopen = false;
+				}
+				return false;
+			});
+		});
+	</script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			border: none;
+		}
+		.loader {
+			position: fixed;
+			z-index: 99;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ffcccb;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.loader>img {
+			width: 100px;
+		}
+		.loader.hidden {
+			animation: fadeOut 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes fadeOut {
+			100% {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		.leftcurtain {
+			width: 50%;
+			height: 100vh;
+			top: 0px;
+			left: 0px;
+			position: absolute;
+			z-index: 2;
+		}
+		.rightcurtain {
+			width: 51%;
+			height: 100vh;
+			right: 0px;
+			top: 0px;
+			position: absolute;
+			z-index: 3;
+		}
+		.rightcurtain img,
+		.leftcurtain img {
+			width: 100%;
+			height: 100%;
+		}
+		.rope {
+			position: absolute;
+			top: -40px;
+			left: 75%;
+			z-index: 4;
+		}
+		.tnp-logo {
+			width: 160vh;
+			height: 70vh;
+			left: 1vh;
+			position: relative;
+			top: -3vh;
+		}
+		.glow {
+			font-size: 7rem;
+			color: #fff;
+			text-align: center;
+			animation: glow 1s ease-in-out infinite alternate;
+			position: absolute;
+			margin: 20px;
+			top: 73vh;
+			right: 60vh;
+			bottom: 15px;
+			font-family: 'Lobster Two', cursive;
+		}
+		@-webkit-keyframes glow {
+			from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+			}
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+			}
+		}
+	</style>
+</head>
+<link rel="stylesheet" href="css/styles.scss">
+<body>
+	<div id="preloader" class="loader">
+		<img src="images/logo.gif" alt="Loading..." />
+	</div>
+	<div>
+		<img class="tnp-logo" src="images/tnp-logo-1.png" alt="TnP Logo">
+	</div>
+	<div>
+		<h1 class="glow">Pandemic Jubilee 2.0</h1>
+	</div>
+	<embed src="audio.mp3" loop="true" autostart="true" width="2" height="0">
+	<div class="leftcurtain"><img src="images/frontcurtain.jpg" /></div>
+	<div class="rightcurtain"><img src="images/frontcurtain.jpg" /></div>
+	<a class="rope" href="#">
+		<img src="images/rope.png" />
+	</a>
+	<div class="page-bg"></div>
+	<div class="animation-wrapper">
+		<div class="particle particle-1"></div>
+		<div class="particle particle-2"></div>
+		<div class="particle particle-3"></div>
+		<div class="particle particle-4"></div>
+	</div>
+
+ <!-- Section-2 -->
+
+<div class="section-2" style="background-image: url('img/bg.jpg'); position:absolute; top: 100vh; height:150vh; width:100%;" >
+ <div >
+ 	 <h1 class="glow">Photo Gallery</h1>
+ </div>
+	 <div class="box " style ="position:absolute; top:70vh; left:93vh;">
+			 <span style="--i:1;">
+					 <img src="img/1.jpg" alt="img1">
+			 </span>
+			 <span style="--i:2;">
+					 <img src="img/2.jpg" alt="img1">
+			 </span>
+			 <span style="--i:3;">
+					 <img src="img/3.jpg" alt="img1">
+			 </span>
+			 <span style="--i:4;">
+					 <img src="img/4.jpg" alt="img1">
+			 </span>
+			 <span style="--i:5;">
+					 <img src="img/12.jpg" alt="img1">
+			 </span>
+			 <span style="--i:6;">
+					 <img src="img/6.jpg" alt="img1">
+			 </span>
+			 <span style="--i:7;">
+					 <img src="img/7.jpg" alt="img1">
+			 </span>
+			 <span style="--i:8;">
+					 <img src="img/11.jpg" alt="img1">
+			 </span>
+			 <span style="--i:9;">
+					 <img src="img/9.jpg" alt="img1">
+			 </span>
+			 <span style="--i:10;">
+					 <img src="img/10.jpg" alt="img1">
+			 </span>
+	 </div>
+</div>
+<br>
+	 <!-- Section-2 -->
+
+<!-- Section-3 -->
+<div class="section-3" style="background-image:url('photos/bg1.jpg'); position:absolute; top:230vh;  height:650vh; width:100%; ">
+
+  <div class="container-fluid cont1">
+    <div class="container-fluid cont1">
+      <div >
+      <h1 class="glow">The Wall of TnP Cell !</h1>
+    </div>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br>
+      <div class="row row1">
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/dhruvsir.png">
+              </div>
+              <div class="card back-face">
+                <img src="photos/dhruvsir.png">
+                <div class="info">
+                  <div class="title">Mr. Dhruv Porwal</div>
+                  <p class="title1">Electronics And Telecommunication<br>2021</p>
+                  <div class="title">"Harry Potter"</div>
+                </div>
+              </div>
+          </div>
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-090717_Instagram.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-090717_Instagram.jpg">
+                <div class="info">
+                  <div class="title">Ms. Ayushi Kala</div>
+                  <p class="title1">Electronics And Telecommunication<br>2021</p>
+                  <div class="title">"Twinkle Toes"</div>
+                </div>
+              </div>
+          </div>
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-091008_Instagram.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-091008_Instagram.jpg">
+                <div class="info">
+                  <div class="title">Ms. Himani Chokade</div>
+                  <p class="title1">Electronics And Telecommunication<br>2021</p>
+                  <div class="title">"Ms. Adoreble"</div>
+                </div>
+              </div>
+          </div>
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-091124_Instagram.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-091124_Instagram.jpg">
+                <div class="info">
+                  <div class="title">Mr. Denil Jain</div>
+                  <p class="title1">Electronics And Telecommunication<br>2021</p>
+                  <div class="title">"Captain Jack Sparrow"</div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <br><br><br><br>
+      <div class="row justify-content-center">
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-092923_WhatsApp.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-092923_WhatsApp.jpg">
+                <div class="info">
+                  <div class="title">Mr. Akash Goyal </div>
+                  <p class="title1">Information Technology<br>2021</p>
+                  <div class="title">"The Master Mind"</div>
+                </div>
+              </div>
+          </div>
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-094029_WhatsApp.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-094029_WhatsApp.jpg">
+                <div class="info">
+                  <div class="title">Ms. Arundhati Chatterjee</div>
+                  <p class="title1">Information Technology<br>2021</p>
+                  <div class="title">"Ms. Charming"</div>
+                </div>
+              </div>
+          </div>
+          <div class="wrapper col-3">
+              <div class="card front-face">
+                <img src="photos/Screenshot_20210513-094044_WhatsApp.jpg">
+              </div>
+              <div class="card back-face">
+                <img src="photos/Screenshot_20210513-094044_WhatsApp.jpg">
+                <div class="info">
+                  <div class="title">Ms. Vinayak Jaiswal.</div>
+                  <p class="title1">Information Technology<br>2021</p>
+                  <div class="title">"Mr. Bright"</div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <br><br><br><br>
+      <div class="row">
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/Deekhasingh.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/Deekhasingh.jpeg">
+            <div class="info">
+              <div class="title">Ms. Deeksha Singh Yadav</div>
+              <p class="title1">Mechanical Engineering<br>2021</p>
+              <div class="title">"Phoebe Buffay"</div>
+            </div>
+          </div>
+      </div>
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/stutikushwaha.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/stutikushwaha.jpeg">
+            <div class="info">
+              <div class="title">Ms. Stuti Kushwaha</div>
+              <p class="title1">Electrical Engineering<br>2021</p>
+              <div class="title">"Dora-The Explorer"</div>
+            </div>
+          </div>
+      </div>
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/amansingh.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/amansingh.jpeg">
+            <div class="info">
+              <div class="title">Mr. Aman Singh Kushwaha</div>
+              <p class="title1">Electronics And Instrumentation<br>2021</p>
+              <div class="title">"Hunk of The Town"</div>
+            </div>
+          </div>
+      </div>
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/rishicawla.jpg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/rishicawla.jpg">
+            <div class="info">
+              <div class="title">Mr. Rishi Chawla</div>
+              <p class="title1">Information Technology<br>2021</p>
+              <div class="title">"Sherlock Holmes"</div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="row justify-content-center">
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/aniketbadwe.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/aniketbadwe.jpeg">
+            <div class="info">
+              <div class="title">Mr. Aniket Badwe</div>
+              <p class="title1">Electronics And Instrumentation<br>2021</p>
+              <div class="title">"Harshad Mehta"</div>
+            </div>
+          </div>
+      </div>
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/labhyamsharma.jpg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/labhyamsharma.jpg">
+            <div class="info">
+              <div class="title">Mr. labhyam Sharma</div>
+              <p class="title1">Electronics And Instrumentation<br>2021</p>
+              <div class="title">"Mr. Bean"</div>
+            </div>
+          </div>
+      </div>
+      <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/lakshyachadda.jpg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/lakshyachadda.jpg">
+            <div class="info">
+              <div class="title">Mr. Lakshya Chadda</div>
+              <p class="title1">Electronics And Instrumentation<br>2021</p>
+              <div class="title">"Michael Jordan"</div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <br><br><br><br>
+        <div class="row">
+          <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/dikshaprushwani.jpg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/dikshaprushwani.jpg">
+              <div class="info">
+                <div class="title">Ms. Diksha Purswani</div>
+                <p class="title1">Electronics And Instrumentation<br>2021</p>
+                <div class="title">"Ms. Undaunted"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/sakshimaheshwari.jpg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/sakshimaheshwari.jpg">
+              <div class="info">
+                <div class="title">Ms. Sakshi Maheshwari</div>
+                <p class="title1">Information Technology<br>2021</p>
+                <div class="title">"Sheldon Cooper"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/shrutijain.jpg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/shrutijain.jpg">
+              <div class="info">
+                <div class="title">Ms. Shruti Jain</div>
+                <p class="title1">Information Technology<br>2021</p>
+                <div class="title">"Richie Rich"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/vivekdubey.jpeg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/vivekdubey.jpeg">
+              <div class="info">
+                <div class="title">Mr. Vivek Dubey</div>
+                <p class="title1">Civil Engineering<br>2021</p>
+                <div class="title">"The Kind One"</div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div class="row justify-content-center">
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/Ayushkhare.jpeg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/Ayushkhare.jpeg">
+              <div class="info">
+                <div class="title">Mr. Ayush Khare</div>
+                <p class="title1">Electronics And Instrumentation<br>2021</p>
+                <div class="title">"Shinchan"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/ayushagrawal.jpeg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/ayushagrawal.jpeg">
+              <div class="info">
+                <div class="title">Mr. Ayush Agrawal</div>
+                <p class="title1">Electronics and Telecommunication<br>2021</p>
+                <div class="title">"Dekisugi"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/sahilsinghai.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/sahilsinghai.jpeg">
+            <div class="info">
+              <div class="title">Mr. Sahil Singhai</div>
+              <p class="title1">Civil Engineering<br>2021</p>
+              <div class="title">"Mr. Charlie"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div class="row">
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/mohinimaam.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/mohinimaam.jpeg">
+            <div class="info">
+              <div class="title">Ms. Mohini Ahirwar</div>
+              <p class="title1">Civil Engineering<br>2021</p>
+              <div class="title">"Lady da Vinci"</div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/pundriksir.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/pundriksir.jpeg">
+            <div class="info">
+              <div class="title">Mr. Pundrikaksh Ghodke</div>
+              <p class="title1">Electrical Engineering<br>2021</p>
+              <div class="title">"Sandeep Bhaiya"</div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/akanshasuryawanshi.jpeg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/akanshasuryawanshi.jpeg">
+              <div class="info">
+                <div class="title">Ms. Akanksha Suryawanshi</div>
+                <p class="title1">Electronics and Telecommunication<br>2021</p>
+                <div class="title">"Ms. Photogenic"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/vineetamaam.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/vineetamaam.jpeg">
+            <div class="info">
+              <div class="title">Ms. Vineeta Pathak</div>
+              <p class="title1">Electronics and Instrumentation<br>2021</p>
+              <div class="title">"Iron Woman"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div class="row justify-content-center">
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/aashisurana.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/aashisurana.jpeg">
+            <div class="info">
+              <div class="title">Ms. Aashi Surana</div>
+              <p class="title1">Information Technology<br>2021</p>
+              <div class="title">"Hermione Granger"</div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/sajalsir.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/sajalsir.jpeg">
+            <div class="info">
+              <div class="title">Mr. Sajal Kumar</div>
+              <p class="title1">Civil Engineering<br>2021</p>
+              <div class="title">"Mr Grin"</div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper col-3">
+            <div class="card front-face">
+              <img src="photos/akanshagoyal.jpeg">
+            </div>
+            <div class="card back-face">
+              <img src="photos/akanshagoyal.jpeg">
+              <div class="info">
+                <div class="title">Ms. Akansha Goyal</div>
+                <p class="title1">Industrial & Production Engineering<br>2021</p>
+                <div class="title">"Ms. Righteous"</div>
+              </div>
+            </div>
+        </div>
+        <div class="wrapper col-3">
+          <div class="card front-face">
+            <img src="photos/Ankitsahu.jpeg">
+          </div>
+          <div class="card back-face">
+            <img src="photos/Ankitsahu.jpeg">
+            <div class="info">
+              <div class="title">Mr. Ankit Sahu</div>
+              <p class="title1">Electronics and Telecommunication<br>2021</p>
+              <div class="title">"Chandler Bing"</div>
+            </div>
+          </div>
+      </div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Section-3 -->
+<script type="text/javascript">
+ window.addEventListener("load", function() {
+	 const loader = document.querySelector(".loader");
+	 loader.className += " hidden";
+ });
+</script>
+	<h3 style="font-family: 'Oswald', sans-serif; color: white; position:absolute; top:750vh; width:80%; font-size:7rem; text-align: center;">Foot-Note</h3>
+<p class="article" style="font-family: 'Dancing Script', cursive; color: white; position:absolute; top:765vh; width:80%; font-size:5rem;">Today it is actually for the very first time that we are feeling so short in our words when we actually want to appreciate as well as thank all of you for all the guidance and support in the past years.
+You have been our source of inspiration and motivation. Working under your leadership made us realize our strengths and weaknesses. We wish you endless happiness and love.
+We promise that your legacy would forever remain deep in our hearts.
+Farewell to the Pillars of TnP.</p>
+
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+	opacity: 50%;
+	font-size: 2rem;
+}
+</style>
+
+<div class="footer">
+  <p>Training and Placement Cell, SGSITS (Indore) &nbsp &nbsp</p>
+</div>
+</body>
+</html>
